@@ -1,0 +1,180 @@
+
+/*CSS reset*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*--------------------------------------------------------------------------*/
+body {
+    background-color: #f8f9fa;
+    /* 淺灰色背景 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+    /* 設定表單寬度，可調整 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+.title{
+    text-align:center;
+    color: aqua;
+    font-size: 32px;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.form-label {
+    width: 80px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.form-control {
+    flex-grow: 1;
+}
+
+.form-select {
+    flex-grow: 1;
+}
+
+.password-input-group {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.password-input {
+    flex-grow: 1;
+}
+
+.password-toggle {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.edit-icon {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.save-button {
+    width: 100%;
+}
+
+/*------------------------------*/
+
+.password-container {
+    display: flex; /* 使用 Flexbox 進行左右佈局 */
+    align-items: center; /* 垂直方向置中對齊 */
+}
+
+.password-label {
+    width: 100px; /* 設定左邊區塊的寬度，您可以根據需求調整 */
+    text-align: center; /* 水平方向置中對齊文字 */
+    display: flex;
+    justify-content: center; /* 水平方向置中對齊內容 */
+    align-items: center; /* 垂直方向置中對齊內容 */
+    height: 100%; /* 讓高度撐滿容器，確保垂直置中 */
+    margin-right: 20px; /* 設定右邊區塊的間距，您可以根據需求調整 */
+}
+
+.password-inputs {
+    flex-grow: 1; /* 讓右邊區塊佔滿剩餘空間 */
+}
+
+.form-group {
+    margin-bottom: 15px; /* 設定每個輸入欄位之間的間距，您可以根據需求調整 */
+}
+
+/* 以下樣式是您原本就有的，可以根據您的需求調整 */
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.password-input-group {
+    position: relative;
+}
+
+.password-toggle, .edit-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.edit-icon {
+    right: 35px; /* 調整編輯圖示的位置，避免與眼睛圖示重疊 */
+}
