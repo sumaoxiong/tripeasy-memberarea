@@ -1,1 +1,3 @@
 # tripeasy-memberarea
+
+github pages：
