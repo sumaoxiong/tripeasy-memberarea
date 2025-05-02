@@ -1,3 +1,3 @@
 # tripeasy-memberarea
 
-github pages：
+github pages：[https://sumaoxiong.github.io/tripeasy-memberarea/](https://sumaoxiong.github.io/tripeasy-memberarea/)
