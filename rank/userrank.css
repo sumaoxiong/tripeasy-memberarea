@@ -53,3 +53,258 @@ table {
 
 
 /*--------------------------------------------------------------------------*/
+
+
+/* 全局樣式 */
+:root {
+	--primary-color: #4e73df;
+	--secondary-color: #1cc88a;
+	--background-color: #f8f9fc;
+	--sidebar-bg: #4e73df;
+	--sidebar-text: #fff;
+	--form-bg: #fff;
+	--border-radius: 0.5rem;
+	--box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+body {
+	font-family: 'Noto Sans TC', sans-serif;
+	background-color: var(--background-color);
+	color: #333;
+	padding-top: 20px;
+}
+
+.container {
+	padding: 2rem 0;
+}
+
+/* 側邊欄樣式 */
+.sidebar {
+	background-color: var(--sidebar-bg);
+	color: var(--sidebar-text);
+	border-radius: var(--border-radius);
+	padding: 1.5rem 1rem;
+	min-height: 100vh;
+	box-shadow: var(--box-shadow);
+	position: relative;
+	transition: all 0.3s;
+}
+
+.headimg {
+	width: 100px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	margin: 0 auto 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.name {
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-bottom: 2rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sidebaritem {
+	padding: 0.75rem 1rem;
+	margin-bottom: 0.5rem;
+	border-radius: 0.3rem;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.sidebaritem:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	transform: translateX(5px);
+}
+
+.sidebaritem.active {
+	background-color: rgba(255, 255, 255, 0.3);
+	font-weight: 600;
+}
+
+/* 主要內容區域 */
+.content {
+	padding: 1.5rem 2rem;
+}
+
+.title {
+	font-size: 1.8rem;
+	font-weight: 700;
+	margin-bottom: 2rem;
+	color: #333;
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid var(--primary-color);
+}
+
+/* 表單標題 */
+.form-title {
+	font-size: 1.3rem;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+	color: var(--primary-color);
+	background-color: var(--form-bg);
+	padding: 1.5rem;
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+	box-shadow: var(--box-shadow);
+	margin-top: 0;
+}
+
+/* 會員等級資料樣式 */
+.field {
+	display: flex;
+	background-color: var(--form-bg);
+	padding: 1rem 1.5rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	margin-bottom: 0;
+}
+
+.field div:first-child {
+	width: 30%;
+	font-weight: 500;
+	color: #555;
+}
+
+.field div:last-child {
+	width: 70%;
+	font-weight: 400;
+}
+
+/* 會員等級特殊樣式 */
+.field:nth-child(3) div:last-child {
+	font-weight: 600;
+	color: var(--primary-color);
+	font-size: 1.1rem;
+}
+
+/* 積分樣式 */
+.field:nth-child(4) div:last-child {
+	color: #f6c23e;
+	font-weight: 600;
+}
+
+/* 折扣碼樣式 */
+.field:nth-child(5) div:last-child {
+	color: #e74a3b;
+	font-weight: 500;
+}
+
+/* 備註樣式 */
+.remark {
+	background-color: var(--form-bg);
+	padding: 1rem 1.5rem;
+	border-radius: 0 0 var(--border-radius) var(--border-radius);
+	font-size: 0.9rem;
+	color: #858796;
+	font-style: italic;
+	margin-bottom: 2rem;
+	box-shadow: var(--box-shadow);
+}
+
+/* 等級卡片 */
+.level-cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	margin-top: 2rem;
+}
+
+.level-card {
+	flex: 1;
+	min-width: 250px;
+	background-color: var(--form-bg);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	overflow: hidden;
+	transition: all 0.3s;
+}
+
+.level-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.level-card-header {
+	padding: 1rem;
+	background-color: #f8f9fc;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	text-align: center;
+}
+
+.level-card-header h3 {
+	margin: 0;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.level-card-body {
+	padding: 1.5rem;
+}
+
+.level-card-body ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.level-card-body li {
+	padding: 0.5rem 0;
+	border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.level-card-body li:last-child {
+	border-bottom: none;
+}
+
+.level-card-body li i {
+	color: var(--secondary-color);
+	margin-right: 0.5rem;
+}
+
+.level-card.active {
+	border: 2px solid var(--primary-color);
+}
+
+.level-card.active .level-card-header {
+	background-color: var(--primary-color);
+	color: white;
+}
+
+/* 響應式設計 */
+@media (max-width: 992px) {
+	.sidebar {
+		min-height: auto;
+		margin-bottom: 1.5rem;
+	}
+
+	.field {
+		flex-direction: column;
+	}
+
+	.field div:first-child,
+	.field div:last-child {
+		width: 100%;
+	}
+
+	.field div:first-child {
+		margin-bottom: 0.5rem;
+		font-weight: 600;
+	}
+}
+
+@media (max-width: 768px) {
+	.content {
+		padding: 1rem;
+	}
+
+	.level-cards {
+		flex-direction: column;
+	}
+}
