@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>訂單管理-頁面切換</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <style>
+        .tab-button {
+            cursor: pointer;
+            padding: 1rem;
+            font-weight: bold;
+        }
+
+        .tab-button.active {
+            border-bottom: 3px solid black;
+        }
+
+        .order-status {
+            font-size: 0.9rem;
+            font-weight: bold;
+            padding: 0.2rem 0.6rem;
+            border-radius: 5px;
+        }
+
+        .status-upcoming {
+            background-color: #e7f1ff;
+            color: #007bff;
+        }
+
+        .status-paid {
+            background-color: #e7f7ed;
+            color: #28a745;
+        }
+
+        .status-cancelled {
+            background-color: #f8d7da;
+            color: #dc3545;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <div class="container my-4">
+        <h3 class="text-center fw-bold mb-4">訂單管理</h3>
+        <div class="d-flex justify-content-around border-bottom">
+            <div class="tab-button active" data-tab="upcoming">即將到來</div>
+            <div class="tab-button" data-tab="completed">已完成</div>
+            <div class="tab-button" data-tab="cancelled">已取消</div>
+        </div>
+
+        <!-- 即將到來 -->
+        <div id="tab-upcoming" class="tab-content mt-4">
+            <!-- 訂單卡片 -->
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-2 bg-secondary d-flex justify-content-center align-items-center text-white">
+                        地點代表圖片</div>
+                    <div class="col-md-10 p-3">
+                        <span class="order-status status-upcoming">即將出發</span>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <div class="text-center">
+                                <div>2025</div>
+                                <div class="fs-4 fw-bold">10/15</div>
+                            </div>
+                            <div class="flex-grow-1 ps-3">
+                                <h5 class="mb-1">日本｜京都散策</h5>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary">跟團旅遊</span>
+                                    <span class="badge bg-secondary">雙人房</span>
+                                    <span class="badge bg-secondary">交通自理</span>
+                                </div>
+                                <div class="text-muted small">訂單編號：tripeasy123</div>
+                                <div class="text-muted">NT$38,800</div>
+                            </div>
+                            <div class="text-end">
+                                <i class="bi bi-headset me-2"></i>
+                                <i class="bi bi-calendar-plus me-2"></i>
+                                <i class="bi bi-receipt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 可重複卡片... -->
+        </div>
+
+        <!-- 已完成 -->
+        <div id="tab-completed" class="tab-content mt-4 d-none">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-2 bg-secondary d-flex justify-content-center align-items-center text-white">
+                        地點代表圖片</div>
+                    <div class="col-md-10 p-3">
+                        <span class="order-status status-paid">已完成</span>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <div class="text-center">
+                                <div>2025</div>
+                                <div class="fs-4 fw-bold">08/18</div>
+                            </div>
+                            <div class="flex-grow-1 ps-3">
+                                <h5 class="mb-1">泰國｜清邁療癒</h5>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary">跟團旅遊</span>
+                                    <span class="badge bg-secondary">雙人房</span>
+                                    <span class="badge bg-secondary">交通自理</span>
+                                </div>
+                                <div class="text-muted small">訂單編號：tripeasy126</div>
+                                <div class="text-muted">NT$27,900</div>
+                            </div>
+                            <div class="text-end">
+                                <i class="bi bi-headset me-2"></i>
+                                <i class="bi bi-calendar-plus me-2"></i>
+                                <i class="bi bi-receipt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 已取消 -->
+        <div id="tab-cancelled" class="tab-content mt-4 d-none">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-2 bg-secondary d-flex justify-content-center align-items-center text-white">
+                        地點代表圖片</div>
+                    <div class="col-md-10 p-3">
+                        <span class="order-status status-cancelled">付款失敗</span>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <div class="text-center">
+                                <div>2025</div>
+                                <div class="fs-4 fw-bold">09/10</div>
+                            </div>
+                            <div class="flex-grow-1 ps-3">
+                                <h5 class="mb-1">美國｜美西公路</h5>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary">跟團旅遊</span>
+                                    <span class="badge bg-secondary">雙人房</span>
+                                    <span class="badge bg-secondary">交通自理</span>
+                                </div>
+                                <div class="text-muted small">訂單編號：tripeasy125</div>
+                                <div class="text-muted">NT$89,500</div>
+                            </div>
+                            <div class="text-end">
+                                <i class="bi bi-headset me-2"></i>
+                                <i class="bi bi-receipt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll(".tab-button");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                // 更新選單樣式
+                tabs.forEach(t => t.classList.remove("active"));
+                tab.classList.add("active");
+
+                // 顯示對應區塊
+                const selected = tab.getAttribute("data-tab");
+                contents.forEach(c => {
+                    c.classList.toggle("d-none", !c.id.includes(selected));
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

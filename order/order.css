@@ -53,9 +53,10 @@ table {
 
 /*清除a標籤預設樣式*/
 a{
-  text-decoration:none;
-  color: #fff;
+    text-decoration:none;
+    color: #fff;
 }
+
 /*全域樣式*/
 :root {
     --primary-color: #4e73df;
@@ -67,6 +68,10 @@ a{
     --border-radius: 0.5rem;
     --box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
 }
+
+
+
+
 
 /*sidebar*/
 
@@ -120,105 +125,47 @@ a{
 	background-color: rgba(255, 255, 255, 0.3);
 	font-weight: 600;
 }
-/* 主標題樣式 */
+
+/*訂單管理內容*/
+
 .title {
     font-size: 1.5rem;
     font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     color: #1c4fa1;
+    text-align:center;
   }
-  
-  /* 提醒區塊樣式 */
-  .remindarea {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    background-color: #f9f9f9;
-  }
-  .form-title {
-    font-weight: 600;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-  }
-  .reminder-option {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  .save-button {
-    margin-top: 0.5rem;
-  }
-  
-  /* 收藏區塊標題 */
-  h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  
-  /* 收藏卡片樣式 */
-  .card-item {
-    border: 1px solid #ccc;
-    border-radius: 1rem;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-}
 
-.card-img {
-    background-color: #ddd;
-    width: 120px;
-    height: 120px;
-    border-radius: .5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1rem;
+
+  .tab-button {
+    cursor: pointer;
+    padding: 1rem;
     font-weight: bold;
 }
 
-.card-label {
-    font-size: 0.8rem;
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.25rem;
-    margin-bottom: 0.3rem;
-    display: inline-block;
+.tab-button.active {
+    border-bottom: 3px solid black;
 }
 
-.label-sale {
-    color: #0d6efd;
-    border: 1px solid #0d6efd;
+.order-status {
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5px;
 }
 
-.label-ended {
+.status-upcoming {
+    background-color: #e7f1ff;
+    color: #007bff;
+}
+
+.status-paid {
+    background-color: #e7f7ed;
+    color: #28a745;
+}
+
+.status-cancelled {
+    background-color: #f8d7da;
     color: #dc3545;
-    border: 1px solid #dc3545;
-}
-
-.tags span {
-    font-size: 0.75rem;
-    background-color: #f0f0f0;
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.3rem;
-    margin-right: 0.3rem;
-    margin-bottom: 0.3rem;
-    display: inline-block;
-}
-
-.price-box {
-    text-align: center;
-}
-
-.btn-detail {
-    white-space: nowrap;
-}
-
-.heart-icon {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    cursor: pointer;
 }
